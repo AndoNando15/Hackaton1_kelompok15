@@ -11,21 +11,27 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <style>
-    .col-6-left,
-    .col-6-right {
-        background-color: red;
+    * {}
+
+    .col-5-left {
+        background-image: url(assets/background/background-login-register.jpeg);
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+
+    .col-5-left,
+    .col-7-right {
+        background-color: white;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 92vh;
+        height: 89vh;
     }
 
     .row {
-
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
 
     .row .col-sm-3 {
@@ -35,12 +41,24 @@
     #email,
     #password,
     #nama-lengkap,
-    #no-handphone {
+    #no-handphone,
+    #btnToDaftar,
+    #btnMasuk {
         width: 100%;
         height: 6vh;
         margin-bottom: 10px;
         border-radius: 5px;
         border: none;
+        background-color: rgba(217, 217, 217, 0.5);
+    }
+
+    #btnMasuk:hover {
+        background-color: navy;
+    }
+
+    .btnGoogle,
+    .btnFacebook {
+        width: 20vh;
         background-color: rgba(217, 217, 217, 0.5);
     }
     </style>
@@ -49,54 +67,45 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-6 col-6-left">
+            <div class="col-lg-5 col-12 col-5-left"></div>
+            <div class="col-lg-7 col-12 col-7-right">
                 <form action="login-register-page.php" method="post">
-
-                    <div class="row bg-primary">
-                        <div class="col-sm-12 bg-secondary" id="hideLogin">
-                            <h1>Masuk</h1>
-                            <p>Masukkan email dan password Anda</p>
+                    <div class="row">
+                        <div class="col-sm-12" id="hideLogin">
+                            <div class="text-center">
+                                <h1>Masuk</h1>
+                                <p>Masukkan email dan password Anda</p>
+                            </div>
                             <label for="email"><b>Email </b></label>
-                            <input id="email" type="email" name="email" placeholder="Masukkan email Anda" required>
-
+                            <input id="email" type="email" name="email" placeholder="   Masukkan email Anda" required>
                             <label for="password"><b>Password </b></label>
-                            <input id="password" type="password" name="password" placeholder="Masukkan password"
+                            <input id="password" type="password" name="password" placeholder="   Masukkan password"
                                 required>
                             <div class="row">
-                                <div class="col-6 text-start">
+                                <div class="col-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-
                                         Ingat saya
-
                                     </div>
                                 </div>
                                 <div class="col-6 text-end text-danger"><a href="#">Lupa kata sandi?</a></div>
                             </div>
-                            <input id="btnToDaftar" type="submit" name="create" value="Login">
-                            <p>ATAU</p>
+                            <input id="btnMasuk" class="bg-primary text-white" type="submit" name="create"
+                                value="Login">
+                            <div class="text-center mt-2 mb-2">ATAU</div>
                             <div class="row justify-content-center">
-                                <div class="col-4 text-end"> <button class="btn btn-primary" type="button">
-
+                                <div class="col-4 text-end"> <button class="btn btnGoogle" type="button">
                                         <img src="assets/icon/icon-google.png" alt="Google"></button>
-
                                 </div>
-                                <div class="col-4 text-start"> <button class="btn btn-primary" type="button">
+                                <div class="col-4 text-start"> <button class="btn btn-primary btnFacebook"
+                                        type="button">
                                         <img src="assets/icon/icon-facebook.png" alt="Facebook"></button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
-
-
-                </form>
-            </div>
-            <div class="col-6 col-6-left">
-                <form action="login-register-page.php" method="post">
-                    <div class="row bg-primary" id="hideDaftar">
-                        <div class="col-sm-12 bg-secondary">
+                    <div class="row d-none" id="hideDaftar">
+                        <div class="col-sm-12">
                             <h1>Daftar Akun</h1>
                             <p>Masukkan data dengan benar untuk mendaftar</p>
                             <label class="text-start" for="nama-lengkap"><b>Nama Lengkap </b></label>
@@ -115,26 +124,19 @@
                             <input id="password" type="password" name="konfirmasi-password"
                                 placeholder="   Konfirmasi password Anda" required><br>
                             <div class="row">
-
-                            </div>
-                            <div class="row">
-                                <div class="col-6 text-start">
+                                <div class="col-6">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-
                                         Ingat saya
-
                                     </div>
                                 </div>
                                 <div class="col-6 text-end text-danger"><a href="#">Lupa kata sandi?</a></div>
                             </div>
                             <input id="btnToMasuk" type="submit" name="create" value="Login">
-                            <p>ATAU</p>
+                            <div class="text-center mt-5 mb-2">ATAU</div>
                             <div class="row justify-content-center">
                                 <div class="col-4 text-end"> <button class="btn btn-primary" type="button">
-
                                         <img src="assets/icon/icon-google.png" alt="Google"></button>
-
                                 </div>
                                 <div class="col-4 text-start"> <button class="btn btn-primary" type="button">
                                         <img src="assets/icon/icon-facebook.png" alt="Facebook"></button>
@@ -142,31 +144,31 @@
                             </div>
                         </div>
                     </div>
-
+                </form>
             </div>
         </div>
-
     </div>
-    <footer class="bg-dark text-center text-white py-3">
-        <div class="container">
-            <div class="row">
+    <div class="row">
+        <footer class="bg-dark text-center text-white py-3 w-100">
+            <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-4 text-end">
-                        Sudah punya akun?
+                    <div class="col-4 text-center">
+                        <button id="btnnMasuk" class="btn btn-link text-white" type="button">Masuk</button>
                     </div>
-                    <div class="col-4 text-start text-danger">
-                        Masuk
+                    <div class="col-4 text-center text-danger">
+                        <button id="btnnDaftar" class="btn btn-link text-danger" type="button">Daftar</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
     <script>
     var daftar = document.getElementById('hideDaftar')
     var login = document.getElementById('hideLogin')
-    var toMasuk = document.getElementById('btnToMasuk')
-    var toDaftar = document.getElementById('btnToDaftar')
-    daftar.classList.add('d-none');
+    var toMasuk = document.getElementById('btnnMasuk')
+    var toDaftar = document.getElementById('btnnDaftar')
+
 
     // Tambahkan event listener untuk tombol 2
     toDaftar.addEventListener('click', function() {
