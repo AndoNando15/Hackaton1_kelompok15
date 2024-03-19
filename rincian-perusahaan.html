@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rincian Perusahaan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+      *,
+      a,
+      body {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        border: none;
+      }
+
+      nav .row {
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-10">
+              <div class="collapse navbar-collapse" id="navbarExample01">
+                <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
+                  <img src="assets/logo/logo-homespot.png" class="ms-5 me-5" alt="" />
+                  <li class="nav-item active">
+                    <div class="dropdown nav-link me-5">
+                      <button class="bg-white text-black dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Pilih Kota</button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Jakarta</a></li>
+                        <li><a class="dropdown-item" href="#">Semarang</a></li>
+                        <li><a class="dropdown-item" href="#">Yogyakarta</a></li>
+                        <li><a class="dropdown-item" href="#">Makassar</a></li>
+                        <li><a class="dropdown-item" href="#">Medan</a></li>
+                        <li><a class="dropdown-item" href="#">Bandung</a></li>
+                        <li><a class="dropdown-item" href="#">Surabaya</a></li>
+                        <li><a class="dropdown-item" href="#">Gresik</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-link active text-dark me-2">blog</li>
+                  <li class="nav-link active text-dark me-2">Tentang Kami</li>
+                  <li class="nav-link active text-dark me-2">Layanan</li>
+                  <li class="nav-link active text-dark me-2">Beli</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-2">
+              <ul class="d-flex">
+                <li>
+                  <button class="btn nav-link bg-white me-3 se-3" style="border: 1px solid blue"><a href="login.html">Masuk</a></button>
+                </li>
+                <li>
+                  <button class="btn nav-link me-5" style="border: 1px solid blue"><a href="register.html">Daftar</a></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Navbar brand -->
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <a href="home.html">
+            <div class="col d-flex ms-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+              </svg>
+              <div class="ms-3" style="margin-top: -0.7vh">
+                <p>Kembali ke halaman sebelumnya</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="container">
+              <div id="carouselExample3" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/Rincian-1.png" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/Rincian-2.png" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/Rincian-3.png" class="d-block w-100" alt="..." />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="container">
+              <div id="carouselExample2" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item">
+                    <img src="assets/img/Rincian-1.png" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item active">
+                    <img src="assets/img/Rincian-2.png" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/Rincian-3.png" class="d-block w-100" alt="..." />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="container">
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item">
+                    <img src="assets/img/Rincian-1.png" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/Rincian-2.png" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item active">
+                    <img src="assets/img/Rincian-3.png" class="d-block w-100" alt="..." />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-4">
+            <a href="">
+              <h2>Rp. 300 Jt - Rp.800 Jt</h2>
+            </a>
+            <p>Lokasi</p>
+            <p>Kabupaten Muara Jambi, Jambi</p>
+            <h5>Cluster Go Home Residence</h5>
+            <div class="container">
+              <div id="carouselExample5" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/Rincian-7.png" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/Rincian-8.png" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/Rincian-9.png" class="d-block w-100" alt="..." />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample5" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample5" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="btn mt-5 mb-3" style="border: 1px solid black">Tipe 29</div>
+            <h5>Go Home Residance</h5>
+            <div class="text-primary">Rp.400.000.000</div>
+            <div class="row mt-3">
+              <div class="col-4" style="border: 1px solid black; width: 11vh; margin: 0 auto">3 KT</div>
+              <div class="col-4" style="border: 1px solid black; width: 11vh; margin: 0 auto">3 KT</div>
+              <div class="col-4" style="border: 1px solid black; width: 11vh; margin: 0 auto">3 KT</div>
+            </div>
+          </div>
+          <div class="col-8 d-flex align-items-center">
+            <div class="container">
+              <h5 class="card-title">Deskripsi</h5>
+              <div class="card text-center p-5">
+                <div class="card-body">
+                  <p class="card-text">Go Home Residence merupakan perumahan yang memiliki <br />tempat strategis dan nyaman untuk keluarga</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col">
+            <div class="">
+              <h3>Forum Diskusi</h3>
+            </div>
+            <p>Go Home Residence, Tipe 29</p>
+            <div class="card text-center">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <img src="assets/icon/icon-chat.png" alt="" />
+                <p class="card-text">Anda memiliki pertanyaan? Diskusikan dengan agen atau pengguna lain</p>
+                <a href="#" class="btn text-white" style="background-color: #f37021">Tulis Pertanyaan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <!-- Footer -->
+      <footer class="text-center text-lg-start mt-5 text-white" style="background-color: #0f78cb">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Links -->
+          <section class="">
+            <!--Grid row-->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Kantor Pusat</h6>
+                <p>PT. Bringin Inti Teknologi (BIT) Intiland Tower Lt 12A Jalan Jenderal Sudirman No. 32 Jakarta Pusat 10220 Indonesia</p>
+              </div>
+              <!-- Grid column -->
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Dukungan</h6>
+                <p>
+                  <a class="text-white">Kebijakan Privasi Syarat dan Ketentuan</a>
+                </p>
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Hubunggi Kami</h6>
+                <p>
+                  <a class="text-white">+62 813-8900-1162</a>
+                </p>
+                <p>
+                  <a class="text-white">support@homespot.id</a>
+                </p>
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Homespot By</h6>
+                <img src="assets/logo/logo-bit.png" alt="" />
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Powered By</h6>
+                <img src="assets/logo/logo-bri.png" alt="" />
+              </div>
+              <!-- Grid column -->
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+            </div>
+            <!--Grid row-->
+          </section>
+          <!-- Section: Links -->
+
+          <hr class="my-3" />
+
+          <!-- Section: Copyright -->
+          <section class="p-3 pt-0">
+            <div class="row d-flex align-items-center">
+              <!-- Grid column -->
+              <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <!-- Copyright -->
+                <div class="p-3">
+                  © 2024 Copyright:
+                  <a class="text-white" href="#">Hacketon 1 Kelompok 15</a>
+                </div>
+                <!-- Copyright -->
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-instagram"></i></a>
+              </div>
+              <!-- Grid column -->
+            </div>
+          </section>
+          <!-- Section: Copyright -->
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

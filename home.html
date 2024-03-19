@@ -8,7 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <style>
       *,
-      a {
+      a,
+      body {
         margin: 0;
         padding: 0;
         text-decoration: none;
@@ -22,6 +23,35 @@
         display: flex;
         align-items: center;
       }
+
+      .imgBg {
+        background-size: auto;
+        background-repeat: no-repeat;
+      }
+      /* Responsiveness */
+
+      @media (max-width: 992px) {
+        .navbar-nav {
+          margin-left: 1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .col-10,
+        .col-2 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        .imgBg {
+          height: auto;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .navbar-nav {
+          margin-left: 0;
+        }
+      }
     </style>
   </head>
 
@@ -33,9 +63,9 @@
             <div class="col-10">
               <div class="collapse navbar-collapse" id="navbarExample01">
                 <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
-                  <img src="assets/logo/logo-homespot.png" alt="" />
+                  <img src="assets/logo/logo-homespot.png" class="ms-5 me-5" alt="" />
                   <li class="nav-item active">
-                    <div class="dropdown nav-link">
+                    <div class="dropdown nav-link me-5">
                       <button class="bg-white text-black dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Pilih Kota</button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#">Jakarta</a></li>
@@ -49,25 +79,31 @@
                       </ul>
                     </div>
                   </li>
-                  <li class="nav-link active text-dark">blog</li>
-                  <li class="nav-link active text-dark">Tentang Kami</li>
-                  <li class="nav-link active text-dark">Layanan</li>
-                  <li class="nav-link active text-dark">Beli</li>
+                  <li class="nav-link active text-dark me-2">blog</li>
+                  <li class="nav-link active text-dark me-2">Tentang Kami</li>
+                  <li class="nav-link active text-dark me-2">Layanan</li>
+                  <li class="nav-link active text-dark me-2">Beli</li>
                 </ul>
               </div>
             </div>
             <div class="col-2">
               <ul class="d-flex">
-                <li><button class="btn bg-white">Masuk</button></li>
-                <li><button class="btn bg-primary ms-2 text-white">Daftar</button></li>
+                <li>
+                  <button class="btn nav-link bg-white me-3 se-3" style="border: 1px solid blue"><a href="login.html">Masuk</a></button>
+                </li>
+                <li>
+                  <button class="btn nav-link me-5" style="border: 1px solid blue"><a href="register.html">Daftar</a></button>
+                </li>
               </ul>
             </div>
           </div>
           <!-- Navbar brand -->
         </div>
       </nav>
-      <div class="container">
-        <img src="hackaton-fe/assets/logo/logo-homespot.png" alt="" />
+      <div class="container-fluid">
+        <div class="row">
+          <img class="imgBg mb-3" src="assets/background/background-homepage-top.png" alt="" />
+        </div>
       </div>
       <div class="container">
         <div class="row">
@@ -80,15 +116,15 @@
       <div class="container">
         <div class="row d-flex justify-content-evenly">
           <div class="card shadow-sm" style="width: 20rem">
-            <img src="" class="card-img-top" alt="..." />
+            <img src="assets/img/Produk-1.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Go Home Recidence</h5>
               <p class="card-text">Banten <br />3KT - 2KM - LB 292m2 - LT 60m2 - SHGB</p>
-              <a href="#" class="">Rp300 Jt - Rp800 Jt</a>
+              <a href="rincian-perusahaan.html" class="">Rp300 Jt - Rp800 Jt</a>
             </div>
           </div>
           <div class="card shadow-sm" style="width: 20rem">
-            <img src="" class="card-img-top" alt="..." />
+            <img src="assets/img/Produk-2.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Graha Permata Estate</h5>
               <p class="card-text">Jawa Tengah <br />3KT - 2KM - LB 292m2 - LT 60m2 - SHGB</p>
@@ -96,7 +132,7 @@
             </div>
           </div>
           <div class="card shadow-sm" style="width: 20rem">
-            <img src="" class="card-img-top" alt="..." />
+            <img src="assets/img/Produk-3.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Graha Permata Wiradadi</h5>
               <p class="card-text">Jawa Tengah <br />3KT - 2KM - LB 292m2 - LT 60m2 - SHGB</p>
@@ -104,17 +140,17 @@
             </div>
           </div>
           <div class="card shadow-sm" style="width: 20rem">
-            <img src="" class="card-img-top" alt="..." />
+            <img src="assets/img/Produk-4.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Grand Trecista Recidence</h5>
               <p class="card-text">Banten <br />3KT - 2KM - LB 292m2 - LT 60m2 - SHGB</p>
-              <a href="#" class="">Rp Jt - Rp Jt</a>
+              <a href="#" class="">Rp4 M - Rp5 M</a>
             </div>
           </div>
         </div>
         <div class="row d-flex justify-content-evenly mt-3">
           <div class="card shadow-sm" style="width: 20rem">
-            <img src="" class="card-img-top" alt="..." />
+            <img src="assets/img/Produk-5.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">The Shizen</h5>
               <p class="card-text">Jawa Barat <br />3KT - 2KM - LB 292m2 - LT 60m2 - SHGB</p>
@@ -122,7 +158,7 @@
             </div>
           </div>
           <div class="card shadow-sm" style="width: 20rem">
-            <img src="" class="card-img-top" alt="..." />
+            <img src="assets/img/Produk-6.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">AI Banjary Village</h5>
               <p class="card-text">Kalimantan Selatan <br />3KT - 2KM - LB 292m2 - LT 60m2 - SHGB</p>
@@ -130,7 +166,7 @@
             </div>
           </div>
           <div class="card shadow-sm" style="width: 20rem">
-            <img src="" class="card-img-top" alt="..." />
+            <img src="assets/img/Produk-7.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Griya Rafada 4 RIVER VIEW</h5>
               <p class="card-text">Jawa Tengah <br />3KT - 2KM - LB 292m2 - LT 60m2 - SHGB</p>
@@ -138,7 +174,7 @@
             </div>
           </div>
           <div class="card shadow-sm" style="width: 20rem">
-            <img src="" class="card-img-top" alt="..." />
+            <img src="assets/img/Produk-8.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Astana Buwana 2</h5>
               <p class="card-text">Jawa Tengah <br />3KT - 2KM - LB 292m2 - LT 60m2 - SHGB</p>
@@ -147,34 +183,128 @@
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="container mt-5">
+        <div class="row mb-5">
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                <img src="hackaton-fe/assets/img/Banner Promosi 1.png" class="d-block w-100" alt="..." />
-              </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                <img src="hackaton-fe/assets/img/Banner Promosi 2.png" class="d-block w-100" alt="..." />
+              <div class="carousel-item active">
+                <img src="assets/img/Banner-Promosi-1.png" class="d-block w-100" alt="..." />
               </div>
               <div class="carousel-item">
-                <img src="hackaton-fe/assets/img/Banner Promosi 3.png" class="d-block w-100" alt="..." />
+                <img src="assets/img/Banner-Promosi-2.png" class="d-block w-100" alt="..." />
               </div>
               <div class="carousel-item">
-                <img src="hackaton-fe/assets/img/Banner Promosi 4.png" class="d-block w-100" alt="..." />
+                <img src="assets/img/Banner-Promosi-3.png" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Banner-Promosi-4.png" class="d-block w-100" alt="..." />
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
         </div>
       </div>
+      <!-- Remove the container if you want to extend the Footer to full width. -->
+
+      <!-- End of .container -->
+    </div>
+    <div class="container-fluid">
+      <!-- Footer -->
+      <footer class="text-center text-lg-start text-white" style="background-color: #0f78cb">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Links -->
+          <section class="">
+            <!--Grid row-->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Kantor Pusat</h6>
+                <p>PT. Bringin Inti Teknologi (BIT) Intiland Tower Lt 12A Jalan Jenderal Sudirman No. 32 Jakarta Pusat 10220 Indonesia</p>
+              </div>
+              <!-- Grid column -->
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Dukungan</h6>
+                <p>
+                  <a class="text-white">Kebijakan Privasi Syarat dan Ketentuan</a>
+                </p>
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Hubunggi Kami</h6>
+                <p>
+                  <a class="text-white">+62 813-8900-1162</a>
+                </p>
+                <p>
+                  <a class="text-white">support@homespot.id</a>
+                </p>
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Homespot By</h6>
+                <img src="assets/logo/logo-bit.png" alt="" />
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Powered By</h6>
+                <img src="assets/logo/logo-bri.png" alt="" />
+              </div>
+              <!-- Grid column -->
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+            </div>
+            <!--Grid row-->
+          </section>
+          <!-- Section: Links -->
+
+          <hr class="my-3" />
+
+          <!-- Section: Copyright -->
+          <section class="p-3 pt-0">
+            <div class="row d-flex align-items-center">
+              <!-- Grid column -->
+              <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <!-- Copyright -->
+                <div class="p-3">
+                  © 2024 Copyright:
+                  <a class="text-white" href="#">Hacketon 1 Kelompok 15</a>
+                </div>
+                <!-- Copyright -->
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-instagram"></i></a>
+              </div>
+              <!-- Grid column -->
+            </div>
+          </section>
+          <!-- Section: Copyright -->
+        </div>
+      </footer>
     </div>
   </body>
 </html>
