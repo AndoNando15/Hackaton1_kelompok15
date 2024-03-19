@@ -38,6 +38,11 @@
         height: 40vh;
     }
 
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
     #email,
     #password,
     #nama-lengkap,
@@ -120,54 +125,22 @@
 
                                 </div>
                             </div>
-                            <form action="login-register-page.php" method="post">
-                                <div class="row" id="hideDaftar">
-                                    <div class="col-sm-12 ">
-                                        <div class="text-center">
-                                            <h1>Daftar Akun</h1>
-                                            <p>Masukkan data dengan benar untuk mendaftar</p>
-                                        </div>
-                                        <label class="text-start" for="nama-lengkap"><b>Nama Lengkap </b></label>
-                                        <input id="nama-lengkap" type="text" name="nama-lengkap"
-                                            placeholder="   Masukkan nama lengkap Anda" required><br>
-                                        <label class="text-start" for="email"><b>Email </b></label>
-                                        <input id="email" type="email" name="email" placeholder="   Masukkan email Anda"
-                                            required><br>
-                                        <label class="text-start" for="no-handphone"><b>No Handphone </b></label>
-                                        <input id="no-handphone" type="tel" name="no-handphone" pattern="[0-9]{10,}"
-                                            placeholder="   Masukkan no handphone Anda" required><br>
-                                        <label for="password"><b>Password </b></label>
-                                        <input id="password" type="password" name="password"
-                                            placeholder="   Masukkan password minimal 8 karakter" required>
-                                        <label for="konfirmasi-password"><b>Konfirmasi Password </b></label>
-                                        <input id="password" type="password" name="konfirmasi-password"
-                                            placeholder="   Konfirmasi password Anda" required><br>
-                                        <div class="row">
 
-                                        </div>
-                                        <div class="row">
-
-                                        </div>
-                                        <input id="btnDaftar" class="bg-primary" type="submit" name="create"
-                                            value="Login">
-
-
-                                    </div>
-                                </div>
-
-
-                            </form>
                     </div>
                     <div class="col-1 mt-5">
 
-                        <div class="row  d-flex justify-content-center">
-                            <div id="btnToMasuk" class="col-4 text-end">
-                                Masuk
+                        <div class="row d-flex justify-content-center">
+
+                            <div id="btnToMasuk" class="col-2 d-flex">
+                                <a href="login.php"> Masuk </a>
                             </div>
 
-                            <div id="btnToDaftar" class="col-4 text-start text-danger">
-                                Daftar
+
+
+                            <div id="btnToDaftar" class="col-2 d-flex    text-danger">
+                                <a href="register.php">Daftar</a>
                             </div>
+
 
                         </div>
                     </div>
