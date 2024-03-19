@@ -42,7 +42,7 @@
     #password,
     #nama-lengkap,
     #no-handphone,
-    #btnToDaftar,
+    #btnDaftar,
     #btnMasuk {
         width: 100%;
         height: 6vh;
@@ -50,6 +50,11 @@
         border-radius: 5px;
         border: none;
         background-color: rgba(217, 217, 217, 0.5);
+    }
+
+    #btnToDaftar,
+    #btnToMasuk {
+        cursor: pointer;
     }
 
     #btnMasuk:hover {
@@ -65,11 +70,11 @@
         width: 20vh;
     }
 
-    /* .col-10,
-    .col-2 {
-        height: 100%;
+
+    .col-1 {
+
         width: 100%;
-    } */
+    }
     </style>
 </head>
 
@@ -110,26 +115,18 @@
                                     </div>
                                     <input id="btnMasuk" class="bg-primary text-white" type="submit" name="create"
                                         value="Login">
-                                    <div class="text-center mt-5 mb-2">ATAU</div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-4 text-end"> <button class="btn btnGoogle" type="button">
 
-                                                <img src="assets/icon/icon-google.png" alt="Google"></button>
 
-                                        </div>
-                                        <div class="col-4 text-start"> <button class="btn btn-primary btnFacebook"
-                                                type="button">
-                                                <img src="assets/icon/icon-facebook.png" alt="Facebook"></button>
-                                        </div>
-                                    </div>
 
                                 </div>
                             </div>
                             <form action="login-register-page.php" method="post">
                                 <div class="row" id="hideDaftar">
                                     <div class="col-sm-12 ">
-                                        <h1>Daftar Akun</h1>
-                                        <p>Masukkan data dengan benar untuk mendaftar</p>
+                                        <div class="text-center">
+                                            <h1>Daftar Akun</h1>
+                                            <p>Masukkan data dengan benar untuk mendaftar</p>
+                                        </div>
                                         <label class="text-start" for="nama-lengkap"><b>Nama Lengkap </b></label>
                                         <input id="nama-lengkap" type="text" name="nama-lengkap"
                                             placeholder="   Masukkan nama lengkap Anda" required><br>
@@ -149,48 +146,29 @@
 
                                         </div>
                                         <div class="row">
-                                            <div class="col-6 text-start">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="defaultCheck1">
 
-                                                    Ingat saya
-
-                                                </div>
-                                            </div>
-                                            <div class="col-6 text-end text-danger"><a href="#">Lupa kata sandi?</a>
-                                            </div>
                                         </div>
-                                        <input type="submit" name="create" value="Login">
-                                        <div class="text-center mt-3 mb-2">ATAU</div>
-                                        <div class="row justify-content-center">
-                                            <div class="col-4 text-end"> <button class="btn btn-primary" type="button">
+                                        <input id="btnDaftar" class="bg-primary" type="submit" name="create"
+                                            value="Login">
 
-                                                    <img src="assets/icon/icon-google.png" alt="Google"></button>
 
-                                            </div>
-                                            <div class="col-4 text-start"> <button class="btn btn-primary"
-                                                    type="button">
-                                                    <img src="assets/icon/icon-facebook.png" alt="Facebook"></button>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
 
 
                             </form>
                     </div>
-                    <div class="col-1 bg-primary">
-                        <div class="row d-flex">
-                            <div class="row justify-content-center">
-                                <div id="btnToMasuk" class="col-4 text-end">
-                                    Masuk
-                                </div>
+                    <div class="col-1 mt-5">
 
-                                <div id="btnToDaftar" class="col-4 text-start text-danger">
-                                    Daftar
-                                </div>
+                        <div class="row  d-flex justify-content-center">
+                            <div id="btnToMasuk" class="col-4 text-end">
+                                Masuk
                             </div>
+
+                            <div id="btnToDaftar" class="col-4 text-start text-danger">
+                                Daftar
+                            </div>
+
                         </div>
                     </div>
                 </div>
