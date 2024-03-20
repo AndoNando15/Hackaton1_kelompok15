@@ -84,7 +84,7 @@
             <div class="col-7 col-7-right">
                 <div class="row d-flex flex-column">
                     <div class="col-11">
-                        <form action="login-register-page.php" method="post">
+                        <form action="login.php" method="post">
 
                             <div class="row d-flex flex-column">
                                 <div class="col-sm-12 " id="hideLogin">
@@ -142,28 +142,7 @@
     </div>
     </div>
 
-    <script>
-        var daftar = document.getElementById('hideDaftar')
-        var login = document.getElementById('hideLogin')
-        var toMasuk = document.getElementById('btnToMasuk')
-        var toDaftar = document.getElementById('btnToDaftar')
-        daftar.classList.add('d-none');
 
-        // Tambahkan event listener untuk tombol 2
-        toDaftar.addEventListener('click', function() {
-            // Menampilkan tombol 1
-            daftar.classList.remove('d-none');
-            // Menyembunyikan tombol 2
-            login.classList.add('d-none');
-        });
-
-        toMasuk.addEventListener('click', function() {
-            // Menampilkan tombol 2
-            login.classList.remove('d-none');
-            // Menyembunyikan tombol 1
-            daftar.classList.add('d-none');
-        });
-    </script>
 </body>
 
 </html>
