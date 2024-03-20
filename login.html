@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -74,6 +75,75 @@
         .col-1 {
             width: 100%;
         }
+=======
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <style>
+    .col-5-left {
+        background-image: url(assets/background/background-login-register.jpeg);
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+
+    .col-5-left,
+    .col-7-right {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .row {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .row .col-sm-3 {
+        height: 40vh;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #email,
+    #password,
+    #confirmation-password,
+    #name,
+    #phone-number,
+    #btnDaftar,
+    #btnMasuk {
+        width: 100%;
+        height: 6vh;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgba(217, 217, 217, 0.5);
+    }
+
+    #btnToDaftar,
+    #btnToMasuk {
+        cursor: pointer;
+    }
+
+    #btnMasuk:hover {
+        background-color: navy;
+    }
+
+    .col-1 {
+
+        width: 100%;
+    }
+>>>>>>> 678c0883ec4f469ef37f7bb5ee8a17873c842d2b
     </style>
 </head>
 
@@ -84,8 +154,12 @@
             <div class="col-7 col-7-right">
                 <div class="row d-flex flex-column">
                     <div class="col-11">
+<<<<<<< HEAD
                         <form action="login.php" method="post">
 
+=======
+                        <form id="loginForm" action="http://127.0.0.1:8000/api/login" method="post">
+>>>>>>> 678c0883ec4f469ef37f7bb5ee8a17873c842d2b
                             <div class="row d-flex flex-column">
                                 <div class="col-sm-12 " id="hideLogin">
                                     <div class="text-center">
@@ -107,13 +181,17 @@
                                         </div>
                                         <div class="col-6 text-end text-danger"><a href="#">Lupa kata sandi?</a></div>
                                     </div>
+<<<<<<< HEAD
                                     <input id="btnMasuk" class="bg-primary text-white" type="submit" name="create" value="Login">
 
 
 
+=======
+                                    <input id="btnMasuk" class="bg-primary text-white" type="submit">
+>>>>>>> 678c0883ec4f469ef37f7bb5ee8a17873c842d2b
                                 </div>
                             </div>
-
+                        </form>
                     </div>
                     <div class="col-1 mt-5">
 
@@ -142,7 +220,43 @@
     </div>
     </div>
 
+<<<<<<< HEAD
 
+=======
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#loginForm').submit(function (event) {
+                event.preventDefault();
+
+                var formData = {
+                    email: $('#email').val(),
+                    password: $('#password').val(),
+                };
+
+                var jsonData = JSON.stringify(formData);
+
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('action'),
+                    contentType: 'application/json', 
+                    data: jsonData,
+                    success: function (response) {
+                        if (response.status) {
+                            localStorage.setItem('token', response.token);
+                            // window.location.href = 'home.html';
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        alert(xhr.responseJSON.message);
+                    }
+                });
+            });
+        });
+    </script>
+>>>>>>> 678c0883ec4f469ef37f7bb5ee8a17873c842d2b
 </body>
 
 </html>
