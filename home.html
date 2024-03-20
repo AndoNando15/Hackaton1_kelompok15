@@ -87,13 +87,21 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-2" id="auth-navbar">
                         <ul class="d-flex">
                             <li>
                                 <button class="btn nav-link bg-white me-3 se-3" style="border: 1px solid blue"><a href="login.html">Masuk</a></button>
                             </li>
                             <li>
                                 <button class="btn nav-link me-5" style="border: 1px solid blue"><a href="register.html">Daftar</a></button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-2" id="auth-logout">
+                        <ul class="d-flex">
+                            <li>
+                                <button class="btn nav-link bg-white me-3 se-3" style="border: 1px solid blue" id="btn-logout">Logout</button>
                             </li>
                         </ul>
                     </div>
@@ -304,6 +312,56 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        var token = localStorage.getItem('token');
+
+        function toggleNavbar() {
+            const authNavbar = document.getElementById('auth-navbar');
+            const authLogout = document.getElementById('auth-logout');
+            
+            if (token) {
+                authNavbar.style.display = 'none';
+                authLogout.style.display = 'block';
+            } else {
+                authNavbar.style.display = 'block';
+                authLogout.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            toggleNavbar();
+        });
+
+        function logout() {
+            if (!token) {
+                console.log('No token found in local storage.');
+                return;
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: 'http://127.0.0.1:8000/api/logout',
+                dataType: 'json',
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                },
+                success: function (response) {
+                    localStorage.removeItem('token');
+                    console.log('Logout successful.');
+                    window.location.href = 'home.html';
+                },
+                error: function (xhr, status, error) {
+                    console.error('Logout failed:', xhr.responseJSON.message);
+                }
+            });
+        }
+
+        $('#btn-logout').click(function () {
+            logout();
+        });
+    </script>
 </body>
 
 </html>
